@@ -14,7 +14,7 @@ Parameters:
     Description: The S3 bucket where you store your lambda code
     Type: String
   SnsSubscriptionEmail:
-    Description: The SNS email for subscription.
+    Description: The SNS email for subscription
     Type: String
 
 # SQS to receive events from Lambda Function
