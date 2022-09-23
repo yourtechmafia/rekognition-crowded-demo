@@ -6,7 +6,7 @@ The purpose of this demo is to build a stack that uses Amazon Rekognition to rec
 
 This repository is a demonstration of how to use the feature Detect Labels of Amazon Rekogntion to rekognize places where a crowd environment is detected and send a notification to an email address, in this demo we will simulate a satellite that will provide image of crowded places and no crowded places to our system.
 
-**This demo was tested on us-east-1 region**
+**I tested this demo on eu-west-1 region**
 
 ## Prerequisites
 
@@ -71,12 +71,18 @@ environment:
     BUCKET_NAME: "<NEW_BUCKET_NAME>"
     AWS_ACCESS_KEY_ID: "<YOUR_AWS_ACCESS_KEY_ID>"
     AWS_SECRET_ACCESS_KEY: "<YOUR_AWS_SECRET_ACCESS_KEY>"
-    AWS_DEFAULT_REGION: "us-east-1"
+    AWS_DEFAULT_REGION: "eu-west-1"
 ```
 
 Add the variables in docker-compose.yaml file, remember **<NEW_BUCKET_NAME>** is the name of the bucket that Cloudformation provisioned not the one we created early.
 
-Start our application.
+Start docker daemon service if you haven't.
+
+```shell
+systemctl start docker
+```
+
+Browse to app directory, build into a docker and start our application.
 
 ```shell
 cd satellite-app && docker-compose up --build
