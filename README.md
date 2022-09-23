@@ -34,7 +34,7 @@ First you need to create a S3 bucket to store our application lambda code.
 aws s3 mb s3://<MY_BUCKET_NAME>
 ```
 
-ZIP lambda code.
+ZIP lambda codes or use the ones provided.
 
 ```shell
 zip ./lambda_package_crowd.zip lambda_recognize_crowd/lambda_function.py
